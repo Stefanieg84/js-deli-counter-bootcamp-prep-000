@@ -1,13 +1,14 @@
-function takeANumber(array, name){
-  array.push(name);
-  return `Welcome, ${name}. You are number ${array.indexOf(name) + 1} in line.`;
+var count = 0;
+
+function takeANumber(array, count){
+  count++;
+  array.push(count);
+  return `Welcome! You are number ${count}.`;
 }
 
 function nowServing(array){
   if(array.length > 0){
-    var first = array[0];
-    array.shift();
-    return `Currently serving ${first}.`;
+    return `Currently serving `+ array.shift() + `.`;
   } else {
     return "There is nobody waiting to be served!";
   }
